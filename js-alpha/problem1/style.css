@@ -1,0 +1,56 @@
+.clearfix:after {
+	content:   " "; /* Older browser do not support empty content */
+	visibility:   hidden;
+	display:   block;
+	height:   0;
+	clear:   both;
+}
+
+.left{
+	float:   left;
+	width:   50%;
+}
+.right{
+	float:   right;
+	width:   50%;
+}
+
+table{
+	width:   100%;
+	vertical-align: top;
+}
+
+.table1{
+	width:   50%;
+}
+
+td{
+	width:   50%;
+}
+
+input[type='text']{
+border-radius: 3px;
+    border: solid 1px grey;
+    height: 24px;
+}
+
+textarea{
+	border-radius: 3px;
+    border: solid 1px grey;
+    height: 100px;
+}
+.required{
+	color:red;
+}
+.submit{
+	text-align: center;
+	margin-top: 30px;
+}
+.submit-button{
+	background-color: green;
+	color: white;
+
+}
+#myform{
+	color:red;
+}

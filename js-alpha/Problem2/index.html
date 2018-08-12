@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Title</title>
+	<script type="text/javascript">
+
+	function search(){
+		var searchString=document.getElementById('searchBox').value.trim();
+		var rows=document.querySelectorAll("table tr");
+		for (var i=1,len1=rows.length; i<len1; i++){
+			var id="row"+i;
+			document.getElementById(id).style.backgroundColor = "white";
+			var tds=rows[i].getElementsByTagName("td");
+			var content=tds[2].innerText;
+			if(content == searchString){
+				document.getElementById(id).style.backgroundColor = "#9BCD7F";	
+			}
+
+			/*
+			for (var j=0,len2=tds.length; j<len2; j++){
+				var content=tds[j].innerText;
+				if(content == searchString){
+					document.getElementById(id).style.backgroundColor = "#9BCD7F";
+					break;
+				}
+			}  */ 
+		}
+	}
+	</script>
+	<style type="text/css">
+	button {
+		background-color: #9BCD7F;
+	}
+	</style>
+</head>
+<body>
+	<input id="searchBox" type="text" name="search">
+	<button id="find" onclick="search()">Search</button>
+	<table id="tab" border='1'>
+		<tr>
+			<td>SNo</td>
+			<td>Brand</td>
+			<td>Category</td>
+			<td>Occasion</td>
+			<td>Fit</td>
+			<td>Cost</td>
+		</tr>
+		<tr id="row1">
+			<td>1</td>
+			<td>Basics</td>
+			<td>Shirt</td>
+			<td>Party</td>
+			<td>Party</td>
+			<td>1200</td>
+		</tr>
+		<tr id="row2">
+			<td>2</td>
+			<td>Allen Solly</td>
+			<td>Pant</td>
+			<td>Casuals</td>
+			<td>Slim</td>
+			<td>1500</td>
+		</tr>
+		<tr id="row3">
+			<td>3</td>
+			<td>Peter England</td>
+			<td>Blazer</td>
+			<td>Wedding</td>
+			<td>Slim</td>
+			<td>15000</td>
+		</tr>
+		<tr id="row4">
+			<td>4</td>
+			<td>Monte Carlo</td>
+			<td>T-Shirt</td>
+			<td>Casuals</td>
+			<td>Regular</td>
+			<td>750</td>
+		</tr>
+		<tr id="row5">
+			<td>5</td>
+			<td>Van Heusen</td>
+			<td>Shirt</td>
+			<td>Formals</td>
+			<td>Regular</td>
+			<td>2000</td>
+		</tr>
+	</table>
+</body>
+</html>

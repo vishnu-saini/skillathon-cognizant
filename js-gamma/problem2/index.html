@@ -1,0 +1,76 @@
+<html>
+<head>
+	<!-- <script type="text/javascript" src="js/jquery-3.1.0.min.js"></script> -->
+	<!-- <style type="text/css">
+	.customer {
+		display:none;
+	}
+</style> -->
+</head>
+<body>
+<div>
+	Customer Name: <input type="text" name="customerName" id="customerName" placeholder="Search Customer Name" onkeyup="getSearchResult()">
+</div>
+<div id="customerDiv">
+	<table class="customer" id="customer-table" border="1">
+	</table>
+	
+</div>
+	<script type="text/javascript">
+	document.addEventListener('DOMContentLoaded', function() {
+
+		var xmlhttp = new XMLHttpRequest();
+		xmlhttp.onreadystatechange = function() {
+			if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+				myFunction(xmlhttp);
+
+			}
+		};
+		xmlhttp.open("GET", "customer.xml", true);
+		xmlhttp.send();
+
+		function myFunction(xml){
+			var i = 0;;
+			var xmlDoc = xml.responseXML;
+			var x = xmlDoc.getElementsByTagName("customer");
+			var table = '<tr><td id="customerId">Customer Id</td><td id="cname">Name</td><td id="username">Username</td><td id="email">Email</td><td id="gender">Gender</td><td id="mobile">Mobile</td></tr>';
+			var tblId = "row"+i;
+			for(i=0; i<x.length;i++){
+				table += '<tr id=row'+i+'><td>' + x[i].getElementsByTagName("cid")[0].childNodes[0].nodeValue +
+    "</td><td class='name'>" +
+    x[i].getElementsByTagName("name")[0].childNodes[0].nodeValue +
+    "</td><td>" +
+    x[i].getElementsByTagName("username")[0].childNodes[0].nodeValue +
+    "</td><td>"+
+    x[i].getElementsByTagName("email")[0].childNodes[0].nodeValue +
+    "</td><td>"+
+    x[i].getElementsByTagName("gender")[0].childNodes[0].nodeValue +
+    "</td><td>"+
+    x[i].getElementsByTagName("mobilenumber")[0].childNodes[0].nodeValue +
+    "</td></tr>";
+			}
+			document.getElementById("customer-table").innerHTML = table;
+		}
+});
+
+	var getSearchResult = function(){
+		var j;
+		var custName = document.getElementById('customerName').value.toLowerCase();
+		var nameList = document.getElementsByClassName('name');
+		for(j=0; j<nameList.length;j++){
+			var nameInList = nameList[j].textContent.toLowerCase();
+			var flag = nameInList.includes(custName);
+			if(flag){
+				nameList[j].parentElement.style.display="";
+			}else{
+				nameList[j].parentElement.style.display="none";
+			}
+		}
+
+	}
+	</script>
+
+
+
+</body>
+</html>

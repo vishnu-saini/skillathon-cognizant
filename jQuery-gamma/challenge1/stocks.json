@@ -1,0 +1,8 @@
+{"stocks":[
+    {"brand":"Kookaburra","total":"15","available":"5", "rate":"13100"},
+    {"brand":"Adidas","total":"10","available":"7", "rate":"11000"},
+    {"brand":"Spartan","total":"20","available":"6", "rate":"9250"},
+	{"brand":"MRF","total":"17","available":"13", "rate":"15000"},
+	{"brand":"Reebok","total":"7","available":"3", "rate":"10000"},
+	{"brand":"SG","total":"12","available":"10", "rate":"7500"}
+]}

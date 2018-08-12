@@ -1,0 +1,26 @@
+<stocklist>
+    <stock>
+        <name>Kookaburra</name>
+        <total>20</total>
+        <available>15</available>
+		<cost>17,000</cost>
+    </stock>
+    <stock>
+        <name>Addidas</name>
+        <total>23</total>
+        <available>20</available>
+		<cost>13,000</cost>
+    </stock>
+    <stock>
+        <name>MRF</name>
+        <total>13</total>
+        <available>5</available>
+        <cost>11,000</cost>
+	</stock>
+    <stock>
+        <name>Spartan</name>
+        <total>5</total>
+        <available>3</available>
+        <cost>23,000</cost>
+    </stock>
+</stocklist>

@@ -1,0 +1,128 @@
+<html>
+<head>
+<style type="text/css">
+	
+
+.search-box{
+	position: relative;
+	display: inline-block;
+}
+.suggestion{
+	position: absolute;
+	border: solid 1px grey;
+	width: 100%;
+	background-color: white; 
+	display: none;
+}
+.suggestion div{
+	padding : 5px;
+}
+
+
+</style>
+</head>
+<body>
+<div>
+	Customer Name:
+
+<div class="search-box">
+	 <input type="text" name="customerName" id="customerName" placeholder="Search Customer Name" onkeyup="getSearchResultInBox()">
+	 <div id="result-div"  class="suggestion">
+
+	 </div>
+	</div>
+<button id="getCustomer" onclick="getCustomerTable()"> Get Customer </button>
+
+</div>
+<div id="customerDiv">
+	<table class="customer" id="result-table" border="1">
+	</table>
+</div>
+	<script type="text/javascript">
+	document.addEventListener('DOMContentLoaded', function() {
+
+		xmlhttp = new XMLHttpRequest();
+		xmlhttp.onreadystatechange = function() {
+			if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+				myFunction(xmlhttp);
+
+			}
+		};
+		xmlhttp.open("GET", "customer.xml", true);
+		xmlhttp.send();
+
+		function myFunction(xml){
+			var i = 0;;
+			var xmlDoc = xml.responseXML;
+			var x = xmlDoc.getElementsByTagName("customer");
+			var table = '';
+			var tblId = "row"+i;
+			for(i=0; i<x.length;i++){
+				table += '<div class="custname" id="name'+i+'">' + x[i].getElementsByTagName("name")[0].childNodes[0].nodeValue +
+    "</div>";
+			}
+			document.getElementsByClassName("suggestion")[0].innerHTML = table;
+		
+		}
+});
+
+	var getSearchResultInBox = function(){
+		var j;
+		document.querySelector('.suggestion').style.display="block";
+		var custName = document.getElementById('customerName').value.toLowerCase();
+		var nameList = document.getElementsByClassName('custname');
+		for(j=0; j<nameList.length;j++){
+			var nameInList = nameList[j].innerText.toLowerCase();
+			var flag = nameInList.includes(custName);
+	
+			if(flag){
+				nameList[j].style.display="";
+			}else{
+				nameList[j].style.display="none";
+			}
+		}
+
+	}
+
+	var getCustomerTable = function(){
+		var custName = document.getElementById('customerName').value;
+		var i = 0;;
+			var xmlDoc = xmlhttp.responseXML;
+			var x = xmlDoc.getElementsByTagName("customer");
+			var table = '<tr><td id="customerId">Customer Id</td><td id="cname">Name</td><td id="username">Username</td><td id="email">Email</td><td id="gender">Gender</td><td id="mobile">Mobile</td></tr>';
+			for(i=0; i<x.length;i++){
+if(x[i].getElementsByTagName("name")[0].childNodes[0].nodeValue == custName){
+
+				table += '<tr id=row'+i+'><td>' + x[i].getElementsByTagName("cid")[0].childNodes[0].nodeValue +
+    "</td><td class='name'>" +
+    x[i].getElementsByTagName("name")[0].childNodes[0].nodeValue +
+    "</td><td>" +
+    x[i].getElementsByTagName("username")[0].childNodes[0].nodeValue +
+    "</td><td>"+
+    x[i].getElementsByTagName("email")[0].childNodes[0].nodeValue +
+    "</td><td>"+
+    x[i].getElementsByTagName("gender")[0].childNodes[0].nodeValue +
+    "</td><td>"+
+    x[i].getElementsByTagName("mobilenumber")[0].childNodes[0].nodeValue +
+    "</td></tr>";
+			}
+		}
+			document.getElementById("result-table").innerHTML = table;
+	}
+
+	function hasClass(elem, className) {
+    return elem.className.split(' ').indexOf(className) > -1;
+}
+
+document.querySelector('.suggestion').addEventListener('click', function (e) {
+    if (hasClass(e.target, 'custname')) { 
+         document.getElementById('customerName').value=e.target.textContent;
+         document.querySelector('.suggestion').style.display="none";
+    } 
+}, false);
+	</script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,12 @@
+Image Gallery
+ 
+Amphi Concepts Online is the best online shopping portal with wide range of casual wear, modern wear and ethnic wear for men, women and kids. 
+
+Mahirl has taken up the position as Business Lead in this Online Store last month. Mahirl believes in principle that in Online Shopping market, presentation and marketing are just as important as producing a high-quality product. Customers are bombarded with images of all shapes and sizes. Since they can’t try things on or test them out, it's important for you to provide a clear, accurate, and appealing representation. 
+Mahirl instructed the software development team to create a roll-over image gallery that looks very appealing and attractive. 
+The UI Architect has planned to use Image Hover and Orientation features to create an amazing display of the products available. 
+You have been given this task of building the image gallery. Can you complete this task with the expertise you have in HTML and CSS? 
+
+Note : Please Download the required images from supporting files in the Problem Tab. 
+
+Please use the same names mentioned in the screenshot for all the UI elements.

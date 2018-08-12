@@ -1,0 +1,10 @@
+
+
+Jquery - Calendar
+
+Build a JQuery monthly calendar with option to move to next and previous month using buttons at the top of the calendar.
+All event data is stored in "events.json" file, load this file using Ajax and then highlight the events in the calendar corresponding to the events.
+
+Follow the UI Constraints like name and id for the UI elements as specified in the below screenshot.
+
+By default the calendar should show January 2016.

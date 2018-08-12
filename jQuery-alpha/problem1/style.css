@@ -1,0 +1,38 @@
+.content .col{
+	min-height: 100vh;
+}
+
+.col-left-head .header{
+	font-size: 30px;
+}
+.content .col-left{
+	float: left;
+	width: 75%;
+    box-sizing: border-box;
+	border-width:5px;	
+    border-style:double;
+}
+.content .col-right{
+	float: right;
+	width: 25%;
+	box-sizing: border-box;
+}
+.col-left-head{
+	text-align: center;
+}
+.card{
+	float: left;
+	background-color: yellow;
+    box-sizing: border-box;
+    padding: 10px;
+    width: 30%;
+    margin: 10px 0 10px 2%;
+        box-shadow: 3px 8px 14px #565656;
+}
+.col-right textarea{
+	width: 100%;
+	height: 200px;
+	margin-top: 200px;
+}
+
+

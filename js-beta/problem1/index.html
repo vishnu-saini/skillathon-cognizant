@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Title</title>
+	<script type="text/javascript">
+	function loadGraph() {
+		var xmlhttp = new XMLHttpRequest();
+		xmlhttp.onreadystatechange = function() {
+			if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+				var json = JSON.parse(xmlhttp.responseText);
+				drawGraph(json);
+			}
+		}
+		xmlhttp.open("GET", "data.json", true);
+		xmlhttp.send();
+	}
+
+	function drawGraph(json){
+		var month=document.getElementById('month').value.trim();			
+		var monthData=json[month];
+		var maxSal=0;
+		console.log(monthData);
+		var l=monthData.length;
+		for (var i = l-1; i >= 0; i--) {
+			if(monthData[i].count >maxSal){
+				maxSal=monthData[i].count;
+			}
+		};
+		var titleHTML="";
+		var barHTML="";
+		for (var i=0;i<l; i++) {
+			titleHTML=titleHTML+"<li><div class='title'>"+monthData[i].name+"</div></li>";
+			var width=(monthData[i].count/maxSal)*100;
+			barHTML=barHTML+"<li><div class='bar' title="+monthData[i].name+" style='width:"+width+"%'>"+monthData[i].count+"</div></li>";
+			console.log(width);
+		};
+		document.getElementById('bar-col').innerHTML=barHTML;
+		document.getElementById('title-col').innerHTML=titleHTML;
+		document.getElementById('title').innerHTML="SALES REPORT - "+month;
+		
+	}
+	</script>
+	<style type="text/css">
+	.title {
+		display: inline-block;
+		text-align: right;
+		padding-right: 15px;
+		height: 26px;
+		vertical-align: middle;
+		border-right: solid 1px grey;
+	}
+
+	.bar {
+		height: 20px;
+		background: #4682b4;
+		display: inline-block;
+		width: 50%;
+		margin-left: -4px;
+		vertical-align: middle;
+		color: white;
+		text-align: center;
+	}
+
+	ul {
+		list-style-type: none;
+		padding-left: 0px;
+		display: inline-block;
+	}
+
+	ul li {
+		margin: -4px 0px;
+		vertical-align: middle;
+		height: 30px;
+	}
+	#bar-col{
+		width: 700px;
+	}
+	#title-col{
+		text-align: right;
+	}
+	#title{
+		text-align: center;
+	}
+	</style>
+</head>
+<body>
+	<div>
+		Month:
+		<select id="month">
+			<option value="January">January</option>
+			<option value="February">February</option>
+			<option value="March">March</option>
+			<option value="April">April</option>
+			<option value="May">May</option>
+			<option value="June">June</option>
+			<option value="July">July</option>
+			<option value="August">August</option>
+			<option value="September">September</option>
+			<option value="October">October</option>
+			<option value="November">November</option>
+			<option value="December">December</option>
+		</select>
+		<button id="reportbtn" onclick="loadGraph()">Report</button>
+	</div>
+<div>
+<h1 id="title"></h1>
+	<ul id="title-col">
+
+	</ul>
+	<ul id="bar-col">
+
+	</ul>
+	</div>
+</body>
+</html>

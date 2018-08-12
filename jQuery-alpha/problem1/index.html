@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <style type="text/css">
+ .content .col{
+    min-height: 100vh;
+}
+
+.col-left-head .header{
+    font-size: 30px;
+}
+.content .col-left{
+    float: left;
+    width: 75%;
+    box-sizing: border-box;
+    border-width:5px;   
+    border-style:double;
+}
+.content .col-right{
+    float: right;
+    width: 25%;
+    box-sizing: border-box;
+}
+.col-left-head{
+    text-align: center;
+}
+.card{
+    float: left;
+    background-color: yellow;
+    box-sizing: border-box;
+    padding: 10px;
+    width: 30%;
+    margin: 10px 0 10px 2%;
+    box-shadow: 3px 8px 14px #565656;
+}
+.col-right textarea{
+    width: 100%;
+    height: 200px;
+    margin-top: 200px;
+}
+
+
+
+</style>
+<script type="text/javascript" src="script.js"></script>
+</head>
+<body>
+    <div class="content">
+        <div class="col col-left"  id="board">
+            <div class="col-left-head">
+                <strong class="header">My Sticky Notes</strong>
+            </div>
+            <div class="col-left-container">
+
+            </div>
+        </div>
+        <div class="col col-right">
+            <div><textarea id="todo" name="note" class="todo-input"></textarea></div>
+            <button id="stick">Stick</button>
+        </div>
+    </div>
+    <script src="jquery-3.1.0.min.js"></script>
+    <script type="text/javascript">
+
+$(document).ready(function(){
+  $( "#stick" ).click(function( event ) {
+    content = $("#todo").val();
+    childcount=$( ".col-left-container" ).children().length + 1;
+    card= "<pre><div class='card' id='note"+childcount+"'>Note"+childcount+"\n"+content+"</div></pre>" ;
+    $( ".col-left-container" ).append(card);
+  });
+});
+
+    </script>
+</body>
+</html>

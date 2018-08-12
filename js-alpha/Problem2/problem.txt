@@ -1,0 +1,5 @@
+Search Table By Text
+Create a Javascript utiltiy which is palnned to used in multple reports in the application. The purpose of this utility is to highlight the corresponding row based on the search text provided by the user. This is used to reduce the time to seach for a particular row in a table with mutliple rows. Design index.html file with table with same data and search text box. 
+
+Screenshot 
+Design the utility as per the  UI constrain specified below, 

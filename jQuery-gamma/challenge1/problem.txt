@@ -1,0 +1,5 @@
+
+JQuery - Table Sort
+Write a JQuery module to display product availablity as shown in the below table. Provide sorting option ascending and descending for the column "Available Qty". Create the table dynamically using the JSON data provide in the code template.
+
+UI constraints should be followed for the element id and name as shown in the screenshot below,

@@ -1,0 +1,163 @@
+<?xml version="1.0"?>
+<customerData>
+    <customer id="cus101">
+        <cid>cus101</cid>
+        <name>Vladimir Meder</name>
+        <username>vladimirmeder</username>
+        <email>vladimirmeder@mail.in</email>
+        <gender>Male</gender>        
+        <mobilenumber>213445</mobilenumber>
+    </customer>
+    <customer id="cus102">
+        <cid>cus102</cid>
+        <name>Clara Choulai</name>
+        <username>clarachoulai</username>
+        <email>clarachoulai@mail.in</email>
+        <gender>Female</gender>
+        <mobilenumber>3762855</mobilenumber>
+    </customer>
+    <customer id="cus103">
+        <cid>cus103</cid>
+        <name>Stephanie Hemesly</name>
+        <username>stephaniehemesly</username>
+        <email>stephaniehemesly@mail.in</email>
+        <gender>Female</gender>
+        <mobilenumber>(03)022-2332</mobilenumber>
+    </customer>
+    <customer id="cus104">
+        <cid>cus104</cid>
+        <name>Marie-Louise Wachberger</name>
+        <username>marie-louisewachberger</username>
+        <email>marie-louisewachberger@mail.in</email>
+        <gender>FeMale</gender>
+        <mobilenumber>03/734-5111</mobilenumber>
+    </customer>
+    <customer id="cus105">
+        <cid>cus105</cid>
+        <name>Prudence Purinton</name>
+        <username>prudencepurinton</username>
+        <email>prudencepurinton@mail.in</email>
+        <gender>Male</gender>
+        <mobilenumber>(02)933-3212</mobilenumber>
+    </customer>
+    <customer id="cus106">
+        <cid>cus106</cid>
+        <name>Gilbert Smith</name>
+        <username>gilbertsmith</username>
+        <email>gilbertsmith@mail.in</email>
+        <gender>Male</gender>
+        <mobilenumber>012/302-1021</mobilenumber>
+    </customer>
+    <customer id="cus107">
+        <cid>cus107</cid>
+        <name>R. Battersby</name>
+        <username>r.battersby</username>
+        <email>r.battersby@mail.in</email>
+        <gender>Male</gender>
+        <mobilenumber>244-6324</mobilenumber>
+    </customer>
+    <customer id="cus108">
+        <cid>cus108</cid>
+        <name>Ito Taylor-Hunyadi</name>
+        <username>leonarddos-remedios</username>
+        <email>leonarddos-remedios@mail.in</email>
+        <gender>Male</gender>
+        <mobilenumber>406/422-3413</mobilenumber>
+    </customer>
+    <customer id="cus109">
+        <cid>cus109</cid>
+        <name>Guillermo Gonzales</name>
+        <username>itotaylor-hunyadi</username>
+        <email>itotaylor-hunyadi@mail.in</email>
+        <gender>Female</gender>
+        <mobilenumber>(0552)715311</mobilenumber>
+    </customer>
+    <customer id="cus110">
+        <cid>cus110</cid>
+        <name>Margaret Medina-Sidonia</name>
+        <username>guillermogonzales</username>
+        <email>guillermogonzales@mail.in</email>
+        <gender>FeMale</gender>
+        <mobilenumber>(021)570517</mobilenumber>
+    </customer>
+    <customer id="cus111">
+        <cid>cus111</cid>
+        <name>Shala Shiekeleslam</name>
+        <username>cmargaretmedina-sidonia</username>
+        <email>cmargaretmedina-sidonia@mail.in</email>
+        <gender>Male</gender>
+        <mobilenumber>02/215-37-32</mobilenumber>
+    </customer>
+    <customer id="cus112">
+        <cid>cus112</cid>
+        <name>Christine Dunnett</name>
+        <username>shalashiekeleslam</username>
+        <email>shalashiekeleslam@mail.in</email>
+        <gender>Male</gender>
+        <mobilenumber>43-57-04</mobilenumber>
+    </customer>
+    <customer id="cus113">
+        <cid>cus113</cid>
+        <name>Yukio Mifune</name>
+        <username>christinedunnett</username>
+        <email>christinedunnett@mail.in</email>
+        <gender>Female</gender>
+        <mobilenumber>4268-54-72</mobilenumber>
+    </customer>
+    <customer id="cus114">
+        <cid>cus114</cid>
+        <name>Richard Ardis</name>
+        <username>yukiomifune</username>
+        <email>yukiomifune@mail.in</email>
+        <gender>Male</gender>
+        <mobilenumber>209/686-3953</mobilenumber>
+    </customer>
+    <customer id="cus115">
+        <cid>cus115</cid>
+        <name>Karl-Heinz Krause</name>
+        <username>richardardis</username>
+        <email>richardardis@mail.in</email>
+        <gender>Male</gender>
+        <mobilenumber>703/714-2900</mobilenumber>
+    </customer>
+    <customer id="cus116">
+        <cid>cus116</cid>
+        <name>William Lovell</name>
+        <username>karl-heinzkrause</username>
+        <email>karl-heinzkrause@mail.in</email>
+        <gender>Male</gender>
+        <mobilenumber>512/478-0788</mobilenumber>
+    </customer>
+    <customer id="cus117">
+        <cid>cus117</cid>
+        <name>Leonard Dos Remedios</name>
+        <username>williamlovell</username>
+        <email>williamlovell@mail.in</email>
+        <gender>Male</gender>
+        <mobilenumber>616/582-3906</mobilenumber>
+    </customer>
+    <customer id="cus118">
+        <cid>cus118</cid>
+        <name>Juan Rodrigues</name>
+        <username>juanrodrigues</username>
+        <email>juanrodrigues@mail.in</email>
+        <gender>Female</gender>
+        <mobilenumber>301/760-2541</mobilenumber>
+    </customer>
+    <customer id="cus119">
+        <cid>cus119</cid>
+        <name>Carol Nishimatsu-Lynch</name>
+        <username>carolnishimatsu-lynch</username>
+        <email>carolnishimatsu-lynch@mail.in</email>
+        <gender>Female</gender>
+        <mobilenumber>919/489-6792</mobilenumber>
+    </customer>
+    <customer id="cus120">
+        <cid>cus120</cid>
+        <name>Chris Vargas</name>
+        <username>chrisvargas</username>
+        <email>chrisvargas@mail.in</email>
+        <gender>Male</gender>
+        <mobilenumber>408629-0589</mobilenumber>
+    </customer>
+</customerData>

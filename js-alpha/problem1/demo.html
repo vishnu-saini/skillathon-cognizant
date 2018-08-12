@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+	<title>Title</title>
+<style type="text/css">
+.clearfix:after {
+	content:   " "; /* Older browser do not support empty content */
+	visibility:   hidden;
+	display:   block;
+	height:   0;
+	clear:   both;
+}
+
+.left{
+	float:   left;
+	width:   50%;
+}
+.right{
+	float:   right;
+	width:   50%;
+}
+
+table{
+	width:   100%;
+	vertical-align: top;
+}
+
+.table1{
+	width:   50%;
+}
+
+td{
+	width:   50%;
+}
+
+input[type='text']{
+border-radius: 3px;
+    border: solid 1px grey;
+    height: 24px;
+}
+
+textarea{
+	border-radius: 3px;
+    border: solid 1px grey;
+    height: 100px;
+}
+.required{
+	color:red;
+}
+.submit{
+	text-align: center;
+	margin-top: 30px;
+}
+.submit-button{
+	background-color: green;
+	color: white;
+
+}
+#myform{
+	color:red;
+}
+
+</style>
+</head>
+
+<body>
+	<h2>New user sign-up</h2>
+
+	<div id="myform"></div>
+
+	<form name="userForm" action="#" onsubmit="return validateForm()" method="post">
+
+	<h4>User details</h4>
+	<table class="table1" cellpadding="2" >
+		<tr><td>E-mail *</td><td>:   <input type="text" name="mail" placeholder="Email-ID" ></td></tr>
+		<tr><td>Password<span class="required">*</span></td><td>:   <input type="text" name="password" placeholder="Password" ></td></tr>
+		<tr><td>Confirm Password<span class="required">*</span></td><td>:   <input type="text" name="confirm_password" placeholder="Confirm Password"></td></tr>
+
+	</table cellpadding="2">
+
+
+	<h4>Your Contact Details</h4>
+	<div class="clearfix">
+		<div class="left" >
+			<table cellpadding="2">
+				<tr><td>First Name *</td><td>:   <input type="text" name="fname"  placeholder="First Name" ></td></tr>
+				<tr><td>Address</td><td>:   <textarea name="address"  placeholder="Address" ></textarea></td></tr>
+				<tr><td>Area</td><td>:   <input type="text" name="area"  placeholder="Area" ></td></tr>
+				<tr><td>Mobile<span class="required">*</span></td><td>:   <input type="text" name="mobile_number"  placeholder="Phone Number" ></td></tr>
+			</table>
+		</div>
+		<div class="right">
+			<table cellpadding="2">
+				<tr><td>Last Name<span class="required">*</span></td><td>:   <input name="lname" placeholder="Last Name" ></td></tr>
+				<tr><td>Country</td><td>:   <select name="country">
+					<option>India</option>
+					<option>China</option>
+				</select></td></tr>
+				<tr><td>State/Province<span class="required">*</span></td><td>:   <input  type="text" name="state" placeholder="State" ></td></tr>
+				<tr><td>City<span class="required">*</span></td><td>:   <input  type="text" name="city" placeholder="City" ></td></tr>
+				<tr><td>Zipcode<span class="required">*</span></td><td>:   <input  type="text" name="zipcode" placeholder="Zipcode" ></td></tr>
+				<tr><td>Telephone</td><td>:   <input type="text" name="telephone" placeholder="Telephone Number" ></td></tr>
+			</table>
+		</div>
+
+
+	</div>
+
+	<h4>Personal (Information)</h4>
+	<div class="clearfix">
+		<div class="left">
+			<table cellpadding="2">
+				<tr><td>Alternate E-mail</td><td> :   <input type="text" name="Aemail"  placeholder="Alternate Email-ID" ></td></tr>
+				<tr><td>Mobile</td><td> :   <input type="text" name="birthday"  placeholder="Birthday" ></td></tr>
+			</table>
+		</div>
+		<div class="right">
+			<table cellpadding="2">
+				<tr><td>Gender</td><td>:   <input type="radio" name="gender" value="male" checked> Male<input type="radio" name="gender" value="female"> Female<br></td></tr>
+				<tr><td>Occupation</td><td>:   <input  type="text" name="occupation" placeholder="Occupation" ></td></tr>
+			</table>
+		</div>
+	</div>
+
+	<div class="submit"><button type="submit" value="Submit" name="submit">Submit</button></div>
+</form>
+
+<script type="text/javascript">
+
+function validateForm() {
+    var mail = document.forms["userForm"]["mail"].value.trim();
+    var password = document.forms["userForm"]["password"].value.trim();
+    var confirm_password = document.forms["userForm"]["confirm_password"].value.trim();
+    var fname = document.forms["userForm"]["fname"].value.trim();
+    var lname = document.forms["userForm"]["lname"].value.trim();
+    var state = document.forms["userForm"]["state"].value.trim();
+    var city = document.forms["userForm"]["city"].value.trim();
+    var zipcode = document.forms["userForm"]["zipcode"].value.trim();
+    var mobile_number = document.forms["userForm"]["mobile_number"].value.trim();
+
+    var result=true;
+    var error="";
+    if (mail == null || mail == "") {
+        error=error+"Please enter your email <br>";
+        result = false;
+    }
+    if (password == null || password == "") {
+        error=error+"Please enter your password<br>";
+        result = false;
+    }
+    if (confirm_password == null || confirm_password == "") {
+        error=error+"Please enter your confirm password<br>";
+        result = false;
+    }
+    if (fname == null || fname == "") {
+        error=error+"Please enter your first name<br>";
+        result = false;
+    }
+    if (lname == null || lname == "") {
+        error=error+"Please enter your last name<br>";
+        result = false;
+    }
+    if (state == null || state == "") {
+        error=error+"Please enter your state<br>";
+        result = false;
+    }
+    if (city == null || city == "") {
+        error=error+"Please enter your city<br>";
+        result = false;
+    }
+    if (zipcode == null || zipcode == "") {
+        error=error+"Please enter your zipcode<br>";
+        result = false;
+    }
+        if (mobile_number == null || mobile_number == "") {
+        error=error+"Please enter your mobile number<br>";
+        result = false;
+    }
+console.log(error)
+    document.getElementById("myform").innerHTML=error;
+    return result;
+}
+</script>
+</body>
+</html>

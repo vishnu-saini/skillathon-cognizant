@@ -1,0 +1,16 @@
+Discussion Forum
+Amphi Concepts Online is the best online shopping portal with wide range of casual wear, modern wear and ethnic wear.
+ 
+Mahirl has taken up the position as the Business Lead recently in the Online Store. She feels that a Discussion forum needs to be provided in the
+
+site wherein their customers will be able to write reviews, comments on other’s feedback and rate the products.
+ 
+Can you help the Software Development Team in creating the UI for Discussion Forum?
+
+When the user clicks on "Post" store the comment in local storage.
+ 
+Constraints:
+The start page should be named as index.html
+The images should be inside a circle
+Text area should have rounded corner of 10px
+The comments should in intended as per shown in the image

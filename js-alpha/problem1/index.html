@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<script type="text/javascript">
+
+	function validateForm() {
+		var mail = document.forms["userForm"]["mail"].value.trim();
+		var password = document.forms["userForm"]["password"].value.trim();
+		var confirm_password = document.forms["userForm"]["confirm_password"].value.trim();
+		var fname = document.forms["userForm"]["fname"].value.trim();
+		var lname = document.forms["userForm"]["lname"].value.trim();
+		var state = document.forms["userForm"]["state"].value.trim();
+		var city = document.forms["userForm"]["city"].value.trim();
+		var zipcode = document.forms["userForm"]["zipcode"].value.trim();
+		var mobile_number = document.forms["userForm"]["mobile_number"].value.trim();
+
+		var result=true;
+		var error="";
+		if (mail == null || mail == "") {
+			error=error+"Please enter your email <br>";
+			result = false;
+		}
+		if (password == null || password == "") {
+			error=error+"Please enter your password<br>";
+			result = false;
+		}
+		if (confirm_password == null || confirm_password == "") {
+			error=error+"Please enter your confirm password<br>";
+			result = false;
+		}
+		if (fname == null || fname == "") {
+			error=error+"Please enter your first name<br>";
+			result = false;
+		}
+		if (lname == null || lname == "") {
+			error=error+"Please enter your last name<br>";
+			result = false;
+		}
+		if (state == null || state == "") {
+			error=error+"Please enter your state<br>";
+			result = false;
+		}
+		if (city == null || city == "") {
+			error=error+"Please enter your city<br>";
+			result = false;
+		}
+		if (zipcode == null || zipcode == "") {
+			error=error+"Please enter your zipcode<br>";
+			result = false;
+		}
+		if (mobile_number == null || mobile_number == "") {
+			error=error+"Please enter your mobile number<br>";
+			result = false;
+		}
+		console.log(error)
+		document.getElementById("myform").innerHTML=error;
+		return result;
+	}
+	</script>
+	<style type="text/css">
+	#myform{
+		color: red;
+	}
+	</style>
+</head>
+
+<body>
+	<header>
+		<h2>New user sign-up</h2>
+	</header>
+	<div id="myform"></div>
+	<form name="userForm" action="#" onsubmit="return validateForm()">
+		<h4>User details</h4>
+		<table class="table1" id="user_details">
+			<tr>
+				<td>E-mail *</td>
+				<td>:<input type="text" name="mail" placeholder="Email-ID" ></td>
+			</tr>
+			<tr>
+				<td>Password *</td>
+				<td>:<input type="text" name="password" placeholder="Password" ></td>
+			</tr>
+			<tr>
+				<td>Confirm Password *</td>
+				<td>:<input type="text" name="confirm_password" placeholder="Confirm Password" ></td>
+			</tr>
+		</table>
+
+		<h4>Your Contact Details</h4>
+		<table id="contact_details">
+			<tr>
+				<td>First Name *</td>
+				<td>:<input type="text" name="fname" placeholder="First Name" ></td>
+				<td>Last Name *</td>
+				<td>:<input type="text" name="lname" placeholder="Last Name" ></td>
+			</tr>
+			<tr>
+				<td rowspan="3">Address</td>
+				<td rowspan="3">:<textarea name="address" placeholder="Address" ></textarea></td>
+				<td>Country</td>
+				<td>:<select name="country"><option value="India">India</option></select></td>
+			</tr>
+			<tr>
+				<td>State/Province *</td>
+				<td>:<input type="text" name="state" ></td>
+			</tr>
+			<tr>
+				<td>City *</td>
+				<td>:<input type="text" name="city" placeholder="City" ></td>
+			</tr>
+
+			<tr>
+				<td>Area</td>
+				<td>:<input type="text" name="area" placeholder="Area"></td>
+				<td>Zipcode *</td>
+				<td>:<input type="text" name="zipcode" placeholder="Zipcode" ></td>
+			</tr>
+			<tr>
+				<td>Mobile *</td>
+				<td>:<input type="text" name="mobile_number" placeholder="Phone Number" ></td>
+				<td>Telephone</td>
+				<td>:<input type="text" name="telephone" placeholder="Telephone Number"></td>
+			</tr>
+		</table>
+
+		<h4>Personal (Information)</h4>
+		<table id="personal_info">
+			<tr>
+				<td>Alternate E-mail</td>
+				<td>:<input type="text" name="Aemail" placeholder="Alternate Email-ID"></td>
+				<td>Gender</td>
+				<td>:
+					<input type="radio" name="gender" value="male" checked>Male
+					<input type="radio" name="gender" value="female">Female
+				</td>
+			</tr>
+			<tr>
+				<td>Birthday</td>
+				<td>:<input type="text" name="birthday" placeholder="Birthday"></td>
+				<td>Occupation</td>
+				<td>:<input type="text" name="occupation" placeholder="Occupation"></td>
+			</tr>
+		</table>
+
+		<input type="submit" name="submit" id="submit">
+	</form>
+</body>
+</html>

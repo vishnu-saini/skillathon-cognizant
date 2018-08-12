@@ -1,0 +1,46 @@
+<html>
+<head>
+	<script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
+	<style type="text/css">
+	.stock {
+		display:none;
+	}
+</style>
+</head>
+<body>
+	<p>Click the button to get the stock details</p>
+	<button id="details">Get Stocks</button>
+<div id="stockDiv">
+	<table class="stock" id="stocks" border="1">
+	</table>
+	
+</div>
+	<script type="text/javascript">
+		$('#details').click(function(){
+			$('#stocks').html('<tr><th id="name">Brand</th><th id="total">Total Qty</th><th id="available">Available</th><th id="cost">Rate</th></tr>');
+			$.get('stocks.xml', function(stockDoc){
+			var $stock = $(stockDoc).find("stock");
+			$stock.each(function(){
+				var name = $(this).find('name').text();
+				var total = $(this).find('total').text();
+				var available = $(this).find('available').text();
+				var cost = $(this).find('cost').text();
+				$('#stocks').append('<tr>'+
+						'<th>'+name+'</th>'+
+						'<th>'+total+'</th>'+
+						'<th>'+available+'</th>'+
+						'<th>'+'Rs.'+cost+'</th>'
+						+'</tr>'
+					);
+
+			});
+			});
+			$('#stocks').css('display','inline-block');
+
+		});
+	</script>
+
+
+
+</body>
+</html>
